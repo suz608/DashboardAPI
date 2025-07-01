@@ -1,5 +1,6 @@
 # DashboardAPI
 This is a Django backend for [personal-dashboard](https://github.com/suz608/personal-dashboard) app.
+It's still under construction. 
 
 ### Prerequisites
 To get started, make sure you have the following installed on your machine:
