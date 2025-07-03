@@ -1,7 +1,7 @@
 import os
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 
 frontend_url = os.getenv("FRONTEND_URL", "http://localhost:4200")  
 
@@ -29,3 +29,8 @@ def login_view(request):
         form = AuthenticationForm()  # Initialize the form for GET request
 
     return render(request, "login.html", {"form": form})
+
+def logout_view(request):
+    if request.method == "POST": 
+        logout(request) 
+        return redirect(frontend_url)
